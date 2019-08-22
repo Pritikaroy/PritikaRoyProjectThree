@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" data-emoji="🤙" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Tera&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Grit Vibe App</title>
+</head>
+<body>
+    <header class="hello">
+        <h1>Grit Vibe App</h1>
+        <h2>"Grit is passion and perseverance for long term goals." - Angela Duckworth</h2>
+
+        <form class="userName" action=""> 
+            <fieldset class="user-info">
+                <label for="name"><h2>Need some Grit today? Enter your name:</h2></label>
+                <input type="text" name="" id="name" placeholder="">
+                <div class="buttonContainer">
+                    <button type="text" class="userSubmit userNameSubmit" name="" id="" value="">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </header>
+    
+    <form action="" class="userReasonForm hide">
+        <h2 class="needSomeGrit"></h2>
+
+        <fieldset class="userReason">
+            <div class="inputContainer">
+                <input type="radio" name="reason" id="resilience" value="resilience">
+                <label for="resilience"><p>Double shot of resilience</p></label>
+
+                <input type="radio" name="reason" id="passion" value="passion">
+                <label for="passion"><p>Passion on the rocks</p></label>
+
+                <input type="radio" name="reason" id="ambition" value="ambition">
+                <label for="ambition"><p>Ambition straight-up</p></label>
+            </div>
+            
+            <div class="buttonContainer">
+                <button type="text" class="userSubmit userNameSubmit" name="" id="" value="">
+                    <i class="fas fa-caret-down"></i>
+                </button>
+            </div>
+        </fieldset>
+
+    </form>
+
+    <form action="" class="userStyleForm hide">
+        <h2 id="styleQuestion" class="styleQuestion">Gotcha! Now pick your vibe!</h2>
+
+        <fieldset class="userStyle">
+            <div class="inputContainer">
+                <input type="radio" name="reason" id="CoddleYouUp" value="CoddleYouUp">
+                <label for="CoddleYouUp"><p>Coddle You Up</p></label>
+            
+                <input type="radio" name="reason" id="ToughYouUp" value="ToughYouUp">
+                <label for="ToughYouUp"><p>Tough You Up</p></label>
+            
+                <input type="radio" name="reason" id="OprahYouUp" value="OprahYouUp">
+                <label for="OprahYouUp"><p>Oprah You Up</p></label>
+            </div>
+            
+            <div class="buttonContainer">
+                <button type="text" class="userSubmit userNameSubmit" name="" id="" value="">
+                    <i class="fas fa-caret-down"></i>
+                </button>
+            </div>
+        </fieldset>
+    </form>
+
+    <section class="resultsWrapper hide">
+        <div class="results hide">
+            <div id="widget" class="vibeContainer">
+                <div class="vibePara"></div>
+            </div>
+            <div class="resultsButtons"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
