@@ -15,12 +15,13 @@
         <h1>Grit Vibe App</h1>
         <h2>"Grit is passion and perseverance for long term goals." - Angela Duckworth</h2>
 
-        <form class="userName" action=""> 
+        <form class="userName" action="#"> 
             <fieldset class="user-info">
                 <label for="name"><h2>Need some Grit today? Enter your name:</h2></label>
-                <input type="text" name="" id="name" placeholder="">
+                <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                <!-- TODO: check if div is necessary for button when styling -->
                 <div class="buttonContainer">
-                    <button type="text" class="userSubmit userNameSubmit" name="" id="" value="">
+                    <button type="submit" class="userSubmit userNameSubmit" name="userNameSubmit" id="userNameSubmit" value="Next Question">
                         <i class="fas fa-caret-down"></i>
                     </button>
                 </div>
@@ -28,23 +29,21 @@
         </form>
     </header>
     
-    <form action="" class="userReasonForm hide">
+    <form class="userReasonForm hide" action="#">
         <h2 class="needSomeGrit"></h2>
 
         <fieldset class="userReason">
             <div class="inputContainer">
-                <input type="radio" name="reason" id="resilience" value="resilience">
-                <label for="resilience"><p>Double shot of resilience</p></label>
+                <input type="radio" name="reason" id="perseverance" value="perseverance">
+                <label for="perseverance"><p>Perseverance straight-up</p></label>
 
                 <input type="radio" name="reason" id="passion" value="passion">
                 <label for="passion"><p>Passion on the rocks</p></label>
 
-                <input type="radio" name="reason" id="ambition" value="ambition">
-                <label for="ambition"><p>Ambition straight-up</p></label>
             </div>
             
             <div class="buttonContainer">
-                <button type="text" class="userSubmit userNameSubmit" name="" id="" value="">
+                <button type="submit" class="userSubmit userNameSubmit" name="userNameSubmit" id="userNameSubmit" value="Next Question">
                     <i class="fas fa-caret-down"></i>
                 </button>
             </div>
@@ -52,10 +51,10 @@
 
     </form>
 
-    <form action="" class="userStyleForm hide">
+    <form action="" class="userVibeForm hide">
         <h2 id="styleQuestion" class="styleQuestion">Gotcha! Now pick your vibe!</h2>
 
-        <fieldset class="userStyle">
+        <fieldset class="userVibe">
             <div class="inputContainer">
                 <input type="radio" name="reason" id="CoddleYouUp" value="CoddleYouUp">
                 <label for="CoddleYouUp"><p>Coddle You Up</p></label>
@@ -68,7 +67,7 @@
             </div>
             
             <div class="buttonContainer">
-                <button type="text" class="userSubmit userNameSubmit" name="" id="" value="">
+                <button type="text" class="userSubmit userVibeSubmit" name="" id="" value="">
                     <i class="fas fa-caret-down"></i>
                 </button>
             </div>
@@ -84,6 +83,8 @@
         </div>
     </section>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
