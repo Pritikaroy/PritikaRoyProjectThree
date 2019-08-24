@@ -25,33 +25,33 @@ const gritApp = {} ;
 gritApp.firstSentence = {
     coddleYouUp: {
         perseverance: (name) => {
-            return `test1 ${name}`
+            return `Why are you second guessing your tenacity, ${name}?`
         },
         passion: (name) => {
-            return `test2 ${name}`
+            return `Why are you second guessing your zealous nature, ${name}?`
         }
     },
     toughYouUp: {
         perseverance: (name) => {
-            return `test1 ${name}`
+            return `Why are you second guessing your determination, ${name}?`
         },
         passion: (name) => {
-            return `test2 ${name}`
+            return `Why are you second guessing your fervent nature, ${name}?`
         }
     },
     oprahYouUp: {
         perseverance: (name) => {
-            return `test1 ${name}`
+            return `Why are you second guessing your determination, ${name}?`
         },
         passion: (name) => {
-            return `test2 ${name}`
+            return `Why are you second guessing your heartfelt nature, ${name}?`
         }
     },
 };
 
-gritApp.gritTalk = {
+gritApp.gritTalks = {
     coddleYouUp: {
-        resilience: [
+        perseverance: [
             'Resilience is very often the factor which leads some people to overcome immense obstacles to become successful.',
         ],
 
@@ -61,7 +61,7 @@ gritApp.gritTalk = {
     },
     
     toughYouUp: {
-        resilience: [
+        perseverance: [
             'Develop a positive self image.Everything starts in the mind – resilient people think well of themselves and see themselves in a positive way.',
         ],
 
@@ -71,7 +71,7 @@ gritApp.gritTalk = {
     },
 
     oprahYouUp: {
-        resilience: [
+        perseverance: [
             'See the good. We’ve all heard the \‘glass half full\’ mentality – resilient people tend to see stressful events or crises as temporary or even as opportunities to learn and grow, rather than as unbearable problems.',
         ],
 
@@ -111,10 +111,11 @@ gritApp.gritTalk = () => {
     $('.userReasonForm').on('submit', function(e){
         e.preventDefault();
         
-        console.log('user has entered their vibe!')
         //save reason
         gritApp.userReason = $('input[name=reason]:checked').val();
         
+
+    
         gritApp.changeQuestions('.userReasonForm', '.userVibeForm');
         
     });
@@ -123,7 +124,35 @@ gritApp.gritTalk = () => {
         e.preventDefault();
         
         //save user style
-        gritApp.userVibe = $('input[name=reason]:checked').val();
+        gritApp.userVibe = $('input[name=vibe]:checked').val();
+        
+        // console.log(gritApp.userReason);
+
+        // console.log(gritApp.userVibe);
+
+
+        // console.log(gritApp.gritTalks[gritApp.userVibe][gritApp.userReason]);
+        
+        // $(".vibeContainer").html('Hello')
+
+        let introSentence = gritApp.firstSentence[gritApp.userVibe][gritApp.userReason] (gritApp.userName);
+        let finalPara = gritApp.gritTalks[gritApp.userVibe][gritApp.userReason];
+
+        let gritParagraph = `<p>${introSentence}</p> <p>${finalPara}</p>`
+
+        console.log(gritParagraph);
+        
+
+        
+        gritApp.changeQuestions('.userVibeForm', '.resultsWrapper');
+        
+        
+        $('.vibePara').append(gritParagraph);
+
+        
+        
+        
+
     })
 };
 
@@ -134,11 +163,8 @@ gritApp.changeQuestions = (currentQuestionClassName, nextQuestionClassName) => {
     $(currentQuestionClassName).addClass("hide");
     $(nextQuestionClassName).removeClass("hide");
     $(nextQuestionClassName).addClass("show");
+
 };
-
-
-
-
 
 
 //IFFY - Immediately-Invoked Function Expression
@@ -151,24 +177,4 @@ $(document).ready(()=> {
     })
     
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
