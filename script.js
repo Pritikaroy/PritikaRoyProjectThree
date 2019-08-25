@@ -22,6 +22,21 @@
 
 const gritApp = {} ;
 
+// Stretch goal:
+gritApp.Giffy = {
+    coddleYouUp: {
+        gif:`src ='styles/assets/youGotThis.gif' alt="a man pepping himself in the mirror"`
+    },
+    
+    toughYouUp: {
+        gif: `src ='styles/assets/shakeItOff.gif' alt="a man shaking it off"`
+    },
+
+    oprahYouUp: {
+        gif: `src ='styles/assets/oprah.gif' alt="oprah being motivational"`
+    },
+};
+
 gritApp.firstSentence = {
     coddleYouUp: {
         perseverance: (name) => {
@@ -81,18 +96,6 @@ gritApp.gritTalks = {
     }
 };
 
-// Stretch goal:
-// gritApp.lastSentence = {
-//     coddleYouUp: {
-//         gif:``
-//     },
-//     toughYouUp: {
-
-//     },
-//     oprahYouUp: {
-
-//     },
-// }
 
 // Listen for submit user name
 gritApp.gritTalk = () => {
@@ -102,7 +105,7 @@ gritApp.gritTalk = () => {
 
     // save user info
         gritApp.userName = $('#name').val();
-        $('.needSomeGrit').html(`${gritApp.userName} What kind of grit do you need today?`);
+        $('.needSomeGrit').html(`${gritApp.userName} , What kind of grit do you need today?`);
         
         gritApp.changeQuestions('.userName', '.userReasonForm');
     });
@@ -134,11 +137,13 @@ gritApp.gritTalk = () => {
         // console.log(gritApp.gritTalks[gritApp.userVibe][gritApp.userReason]);
         
         // $(".vibeContainer").html('Hello')
-
+        
         let introSentence = gritApp.firstSentence[gritApp.userVibe][gritApp.userReason] (gritApp.userName);
         let finalPara = gritApp.gritTalks[gritApp.userVibe][gritApp.userReason];
-
+         
         let gritParagraph = `<p>${introSentence}</p> <p>${finalPara}</p>`
+
+        const finalVideo = `<img ${gritApp.Giffy[gritApp.userVibe].gif}>`
 
         console.log(gritParagraph);
         
@@ -148,6 +153,7 @@ gritApp.gritTalk = () => {
         
         
         $('.vibePara').append(gritParagraph);
+        $('.gifContainer').append(finalVideo);
 
         
         
@@ -166,6 +172,11 @@ gritApp.changeQuestions = (currentQuestionClassName, nextQuestionClassName) => {
 
 };
 
+// document.body.addEventListener('click', function (e) {
+//     if (e.target.matches('css-doodle')) {
+//         e.target.refresh();
+//     }
+// });
 
 //IFFY - Immediately-Invoked Function Expression
 
@@ -178,3 +189,45 @@ $(document).ready(()=> {
     
 });
 
+// Inpiration from Nash Vail - https://codepen.io/nashvail/pen/wpGgXO
+
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 70;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+    let ball = document.createElement("div");
+    ball.classList.add("ball");
+    ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+    ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+    ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+    ball.style.transform = `scale(${Math.random()})`;
+    ball.style.width = `${Math.random()}em`;
+    ball.style.height = ball.style.width;
+
+    balls.push(ball);
+    document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+    let to = {
+        x: Math.random() * (i % 2 === 0 ? -11 : 11),
+        y: Math.random() * 12
+    };
+
+    let anim = el.animate(
+        [
+            { transform: "translate(0, 0)" },
+            { transform: `translate(${to.x}rem, ${to.y}rem)` }
+        ],
+        {
+            duration: (Math.random() + 1) * 2000, // random duration
+            direction: "alternate",
+            fill: "both",
+            iterations: Infinity,
+            easing: "ease-in-out"
+        }
+    );
+});
