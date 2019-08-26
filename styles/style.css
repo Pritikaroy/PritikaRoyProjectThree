@@ -291,7 +291,7 @@ h3 {
   color: #333333;
   text-align: center;
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .buttonContainer {
@@ -702,6 +702,7 @@ input[type="radio"]:checked + label {
   }
   #name {
     width: 50%;
+    font-size: 2rem;
   }
   .needSomeGrit {
     font-size: 2rem;
@@ -752,7 +753,7 @@ input[type="radio"]:checked + label {
   }
   #name {
     width: 40%;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   .needSomeGrit {
     font-size: 2rem;
