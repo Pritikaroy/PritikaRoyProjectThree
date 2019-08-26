@@ -1,0 +1,316 @@
+// Media Queries
+
+@media (max-width: 1280px) {
+    h1 {
+        font-size: 8rem;
+        padding: 80px 0 30px 200px;
+    }
+    
+    .needSomeGrit {
+        // padding: 30px 0 50px 100px;
+        padding: inherit;
+    }
+
+    .inputContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .userReasonForm {
+        .buttonContainer {
+            padding-left: 580px;
+        }
+    }
+
+    .styleQuestion {
+        padding: 30px 0 50px 350px;
+    }
+
+    .userVibeForm {
+        .buttonContainer {
+            padding-left: 640px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    header{
+        min-height: 10vh;
+    }
+    h1 {
+        font-size: 6rem;
+        padding: 80px 0 30px 200px;
+    }
+
+    h2{
+        font-size: 2.8rem;
+    }
+
+    input[type="radio"] + label {
+        width: 60%;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        font-size: 2rem;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .userVibe input[type="radio"] + label {
+        width: 30%;
+        padding: 10px 0;
+    }
+
+    .userReasonForm {
+        .buttonContainer {
+            padding-left: 390px;
+        }
+    }
+
+    .styleQuestion {
+        padding-left: 150px;
+    }
+
+    .userVibeForm {
+        .buttonContainer {
+            padding-left: 440px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 5rem;
+        padding: 80px 0 30px 150px;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .needSomeGrit {
+        font-size: 2.3rem;
+    }
+
+    input[type="radio"] + label {
+        width: 40%;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        font-size: 2rem;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .userVibe input[type="radio"] + label {
+        width: 20%;
+        padding: 0;
+    }
+
+    .userReasonForm {
+        .buttonContainer {
+            padding-left: 320px;
+        }
+    }
+
+    .styleQuestion {
+        padding-left: 150px;
+        font-size: 2.3rem;
+    }
+
+    .userVibeForm {
+        .buttonContainer {
+            padding-left: 380px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 4rem;
+        padding-left: 100px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .needSomeGrit {
+        font-size: 2rem;
+    }
+
+    input[type="radio"] + label {
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        font-size: 2rem;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .userVibe input[type="radio"] + label {
+        width: 20%;
+        padding: 0;
+    }
+
+    .userReasonForm {
+        .buttonContainer {
+            padding-left: 200px;
+        }
+    }
+
+    .styleQuestion {
+        padding-left: 80px;
+        font-size: 2rem;
+    }
+
+    .userVibeForm {
+        .buttonContainer {
+            padding-left: 250px;
+        }
+    }
+
+    .resultsWrapper {
+        border: none;
+    }    
+}
+
+@media (max-width: 500px) {
+    
+    h1 {
+        font-size: 2.8rem;
+        padding-left: 50px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        padding-left: 10px;
+
+    }
+    
+    #name{
+        width: 50%;
+    }
+    
+    .needSomeGrit {
+        font-size: 2rem;
+    }
+
+    input[type="radio"] + label {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        font-size: 1.8rem;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .userVibe input[type="radio"] + label {
+        width: 40%;
+        padding: 0;
+    }
+
+    .userReasonForm {
+        .buttonContainer {
+            padding-left: 130px;
+        }
+    }
+
+    .styleQuestion {
+        padding-left: 20px;
+        font-size: 2rem;
+    }
+
+    .userVibeForm {
+        .buttonContainer {
+            padding-left: 180px;
+        }
+    }
+
+    .resultsWrapper {
+        border: none;
+    }    
+}
+
+@media (max-width: 400px) {
+    
+    h1 {
+        font-size: 2.5rem;
+        padding-left: 25px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        padding-left: 10px;
+
+    }
+    
+    #name{
+        width: 40%;
+        font-size: 2.5rem;
+    }
+    
+    .needSomeGrit {
+        font-size: 2rem;
+        padding-top: -20px;
+    }
+
+    input[type="radio"] + label {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        font-size: 1.5rem;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .userVibe input[type="radio"] + label {
+        width: 40%;
+        padding: 0;
+    }
+
+    .userReasonForm {
+        .buttonContainer {
+            padding-left: 100px;
+        }
+    }
+
+    .styleQuestion {
+        padding-left: 20px;
+        font-size: 2rem;
+    }
+
+    .userVibeForm {
+        .buttonContainer {
+            padding-left: 150px;
+        }
+    }
+
+    .resultsWrapper {
+        border: none;
+        font-size: 2rem;
+    }   
+    
+    img{
+        width: 100%;
+    }
+}

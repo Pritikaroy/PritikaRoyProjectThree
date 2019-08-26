@@ -17,7 +17,7 @@
 
         <form class="userName" action="#"> 
             <fieldset class="userInfo">
-                <label for="name"><h2>Need some Grit today? Enter your name: </h2></label>
+                <label for="name"><h3>Need some Grit today? Enter your name: </h3></label>
                 <input type="text" name="name" id="name" placeholder="Enter Your Name">
                 <!-- TODO: check if div is necessary for button when styling -->
                 <div class="buttonContainer">
@@ -30,7 +30,7 @@
     </header>
     
     <form class="userReasonForm hide" action="#">
-        <h2 class="needSomeGrit"></h2>
+        <h3 class="needSomeGrit"></h3>
 
         <fieldset class="userReason">
             <div class="inputContainer">
@@ -39,20 +39,19 @@
 
                 <input type="radio" name="reason" id="passion" value="passion">
                 <label for="passion"><p>Passion on the rocks</p></label>
-
             </div>
             
             <div class="buttonContainer">
                 <button type="submit" class="userSubmit userNameSubmit" name="userNameSubmit" id="userNameSubmit" value="Next Question">
-                    <i class="fas fa-caret-down"></i>
+                    <i class="fas fa-arrow-down"></i>
                 </button>
             </div>
         </fieldset>
 
     </form>
 
-    <form action="" class="userVibeForm hide">
-        <h2 id="styleQuestion" class="styleQuestion">Gotcha! Now pick your vibe!</h2>
+    <form action="#" class="userVibeForm hide">
+        <h3 id="styleQuestion" class="styleQuestion">Gotcha! Now pick your vibe!</h3>
 
         <fieldset class="userVibe">
             <div class="inputContainer">
@@ -67,8 +66,8 @@
             </div>
             
             <div class="buttonContainer">
-                <button type="text" class="userSubmit userVibeSubmit" name="" id="" value="">
-                    <i class="fas fa-caret-down"></i>
+                <button type="submit" class="userSubmit userNameSubmit" name="userNameSubmit" id="userNameSubmit" value="Next Question">
+                    <i class="fas fa-arrow-down"></i>
                 </button>
             </div>
         </fieldset>
@@ -76,40 +75,14 @@
 
     <section class = "resultsWrapper hide">
         <div class = "results">
-            <div id="widget" class="vibeContainer">
-                <div class="gifContainer">
-                
-                    
-                </div>
+            <div class="vibeContainer">
+                <div class="gifContainer"></div>
                 <div class="vibePara"></div>
             </div>
             <div class="resultsButtons"></div>
         </div>
     </section>
     
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.7.2/css-doodle.min.js"></script> -->
-
-    <!-- <css-doodle grid="7">
-    
-        :doodle {
-        size: 100vmax;
-        min-size: 600px;
-        background: #2a2e31;
-        }
-    
-        border-radius: 24%;
-        border: 1px solid hsla(
-        calc(180 + 5 * @index()), 80%, 80%, .7
-        );
-    
-        transition: .2s ease @rand(500ms);
-        transform:
-        rotate(@pick(60deg, -60deg))
-        scale(1.2);
-    
-    </css-doodle> -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="script.js"></script>
     

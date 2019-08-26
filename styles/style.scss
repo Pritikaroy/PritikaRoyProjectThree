@@ -2,18 +2,18 @@
 @import 'utilities';
 
 
-html{
+html {
     scroll-behavior: smooth;
     font-size: 62.5%;
     font-family: 'Lexend Mega', sans-serif;
 }
-body{
-    // background: peachpuff;
+
+body {
+    background: peachpuff;
     font-size: 2rem;
     font-family: 'Lexend Mega', sans-serif;
-    line-height: 50px;
+    line-height: 40px;
     letter-spacing: 5px;
-    // overflow: hidden;
 }
 
 .ball {
@@ -34,32 +34,31 @@ header {
 
         
 }
-h1{
-    padding: 80px 0 30px 250px;
+h1 {
+    padding: 80px 0 30px 300px;
     font-size: 10rem;
     margin: 0;
     font-weight: 400;
 }
 
-h2{
+h2 {
     padding: 30px 0 30px 50px;
+    font-style: italic;
     font-size: 3rem;
     margin: 0;
-    // border: 2px solid tomato;
     color: black;
     text-align: center;
     padding-top: 25px;
-    // background-image: linear-gradient(transparent 85%, blue 85%);
     display: inline-block;
 }
 
-
-h3{
-    padding: 10px;
-    font-size: 2rem;
+h3 {
     margin: 0; 
-    border: 2px solid tomato;
-
+    padding: 30px 0 40px 50px;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    display: inline-block;
 }
 
 #name {
@@ -75,18 +74,19 @@ h3{
 .buttonContainer {
     position: relative;
     display: flex;
-    width: 20px;
+    flex-wrap: wrap;
+    width: 50px;
     height: 20px;
     justify-content: center;
     margin-top: 10px;
 
 }
 
-.userName{
+.userName {
     display: block;
 }
 
-.userInfo{
+.userInfo {
     padding: 30px 0 30px 0px;
     font-size: 2rem;
     margin: 0;
@@ -97,24 +97,160 @@ h3{
     flex-direction: column;
 }
 
-.fa-arrow-down{
-    text-shadow: 10px 10px 10px 10px tomato;
-    font-size: 3rem;
+.fa-arrow-down {
+    font-size: 4rem;
 }
 
 // Arrow button style
-.userNameSubmit{
+.userNameSubmit {
     background-color: transparent;
     z-index: 10;
     border: none;
-    font-size: 3.5rem;
+    font-size: 5rem;
     width: 100%;
-    color: blue;
+    color: palevioletred;
 }
 
 .userNameSubmit:hover .fa-arrow-down {
-    color: yellow;
+    color: rgb(102, 3, 102);
     transition: color 2s ease-out, 2s ease-out;
+}
+
+// User Reason & User Vibe Section Styling
+
+.needSomeGrit {
+    justify-content: center;
+    margin: 0;
+    padding: 30px 0 50px 250px;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.userReasonForm {
+    padding: 10px 50px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userReasonForm {
+    .buttonContainer {
+        padding-left: 650px;
+    }
+}
+
+.userVibeForm {
+    .buttonContainer {
+        padding-left: 700px;
+    }
+}
+
+.styleQuestion {
+    justify-content: center;
+    margin: 0;
+    padding: 30px 0 50px 420px;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+// Styles for Radio Buttons
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"] + label {
+    // background-color: rgb(243, 243, 188);
+    font-size: 2rem;
+    display: block;
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+    letter-spacing: 5px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+
+input[type="radio"]:checked + label {
+    background-color: blanchedalmond;
+    transition: background-color, color .1s ease-in-out;
+}
+
+// Yaay results section styling
+
+.resultsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border: #333333 4px solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.resultsButtons {
+    padding: 20px 0 20px 0;
+}
+
+
+.vibeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.vibePara {
+    width: 100%;
+    padding: 10px;
+}
+
+.vibePara p:nth-child(1) {
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.resetPage {
+    display: block;
+    font-family: 'Lexend Mega', sans-serif;
+    flex: 0 0 100%;
+    padding: 0;
+    margin: 0 auto;
+    background-color: burlywood;
+    z-index: 10;
+    border: .5px black;
+    border-radius: 5%;
+    &:hover {
+        cursor: pointer;
+    }
+
 }
 
 .hide {
@@ -124,3 +260,5 @@ h3{
 .show {
     display: block;
 }
+
+@import '_mediaQueries'

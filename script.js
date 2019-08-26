@@ -140,43 +140,41 @@ gritApp.gritTalk = () => {
         
         let introSentence = gritApp.firstSentence[gritApp.userVibe][gritApp.userReason] (gritApp.userName);
         let finalPara = gritApp.gritTalks[gritApp.userVibe][gritApp.userReason];
-         
+        
         let gritParagraph = `<p>${introSentence}</p> <p>${finalPara}</p>`
 
         const finalVideo = `<img ${gritApp.Giffy[gritApp.userVibe].gif}>`
 
-        console.log(gritParagraph);
-        
+        let gritButtons = `<button class ='resetPage'>Start from scratch</button>`
 
-        
         gritApp.changeQuestions('.userVibeForm', '.resultsWrapper');
-        
         
         $('.vibePara').append(gritParagraph);
         $('.gifContainer').append(finalVideo);
+        $('.resultsButtons').append(gritButtons);
 
-        
-        
-        
+    });
 
+    // Listen for click on reset page - hide current results and show user form again.
+
+    $('.results').on('click', '.resetPage', function () {
+        console.log('button was clicked')
+        //hard refresh page
+        location.reload(true);   
+        
     })
 };
 
-// toggle to show first question
-gritApp.changeQuestions = (currentQuestionClassName, nextQuestionClassName) => {
+    // toggle to show first question
+    gritApp.changeQuestions = (currentQuestionClassName, nextQuestionClassName) => {
 
-    $(currentQuestionClassName).removeClass("show");
-    $(currentQuestionClassName).addClass("hide");
-    $(nextQuestionClassName).removeClass("hide");
-    $(nextQuestionClassName).addClass("show");
+        $(currentQuestionClassName).removeClass("show");
+        $(currentQuestionClassName).addClass("hide");
+        $(nextQuestionClassName).removeClass("hide");
+        $(nextQuestionClassName).addClass("show");
 
-};
+    };
 
-// document.body.addEventListener('click', function (e) {
-//     if (e.target.matches('css-doodle')) {
-//         e.target.refresh();
-//     }
-// });
 
 //IFFY - Immediately-Invoked Function Expression
 
@@ -189,7 +187,7 @@ $(document).ready(()=> {
     
 });
 
-// Inpiration from Nash Vail - https://codepen.io/nashvail/pen/wpGgXO
+// Background from Nash Vail - https://codepen.io/nashvail/pen/wpGgXO
 
 const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 

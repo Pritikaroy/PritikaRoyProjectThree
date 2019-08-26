@@ -228,9 +228,10 @@ html {
 }
 
 body {
+  background: peachpuff;
   font-size: 2rem;
   font-family: 'Lexend Mega', sans-serif;
-  line-height: 50px;
+  line-height: 40px;
   letter-spacing: 5px;
 }
 
@@ -257,7 +258,7 @@ header {
 }
 
 h1 {
-  padding: 80px 0 30px 250px;
+  padding: 80px 0 30px 300px;
   font-size: 10rem;
   margin: 0;
   font-weight: 400;
@@ -265,6 +266,7 @@ h1 {
 
 h2 {
   padding: 30px 0 30px 50px;
+  font-style: italic;
   font-size: 3rem;
   margin: 0;
   color: black;
@@ -274,10 +276,12 @@ h2 {
 }
 
 h3 {
-  padding: 10px;
-  font-size: 2rem;
   margin: 0;
-  border: 2px solid tomato;
+  padding: 30px 0 40px 50px;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  display: inline-block;
 }
 
 #name {
@@ -295,7 +299,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50px;
   height: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -328,23 +334,188 @@ h3 {
 }
 
 .fa-arrow-down {
-  text-shadow: 10px 10px 10px 10px tomato;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .userNameSubmit {
   background-color: transparent;
   z-index: 10;
   border: none;
-  font-size: 3.5rem;
+  font-size: 5rem;
   width: 100%;
-  color: blue;
+  color: palevioletred;
 }
 
 .userNameSubmit:hover .fa-arrow-down {
-  color: yellow;
+  color: #660366;
   -webkit-transition: color 2s ease-out, 2s ease-out;
   transition: color 2s ease-out, 2s ease-out;
+}
+
+.needSomeGrit {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 30px 0 50px 250px;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  display: inline-block;
+}
+
+.inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userReasonForm {
+  padding: 10px 50px 10px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userReasonForm .buttonContainer {
+  padding-left: 650px;
+}
+
+.userVibeForm .buttonContainer {
+  padding-left: 700px;
+}
+
+.styleQuestion {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 30px 0 50px 420px;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  display: inline-block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  font-size: 2rem;
+  display: block;
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  letter-spacing: 5px;
+  border-radius: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+input[type="radio"]:checked + label {
+  background-color: blanchedalmond;
+  -webkit-transition: background-color, color .1s ease-in-out;
+  transition: background-color, color .1s ease-in-out;
+}
+
+.resultsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 90vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border: #333333 4px solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.resultsButtons {
+  padding: 20px 0 20px 0;
+}
+
+.vibeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.vibePara {
+  width: 100%;
+  padding: 10px;
+}
+
+.vibePara p:nth-child(1) {
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.resetPage {
+  display: block;
+  font-family: 'Lexend Mega', sans-serif;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  padding: 0;
+  margin: 0 auto;
+  background-color: burlywood;
+  z-index: 10;
+  border: .5px black;
+  border-radius: 5%;
+}
+
+.resetPage:hover {
+  cursor: pointer;
 }
 
 .hide {
@@ -353,5 +524,272 @@ h3 {
 
 .show {
   display: block;
+}
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 8rem;
+    padding: 80px 0 30px 200px;
+  }
+  .needSomeGrit {
+    padding: inherit;
+  }
+  .inputContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .userReasonForm .buttonContainer {
+    padding-left: 580px;
+  }
+  .styleQuestion {
+    padding: 30px 0 50px 350px;
+  }
+  .userVibeForm .buttonContainer {
+    padding-left: 640px;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    min-height: 10vh;
+  }
+  h1 {
+    font-size: 6rem;
+    padding: 80px 0 30px 200px;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  input[type="radio"] + label {
+    width: 60%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    font-size: 2rem;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .userVibe input[type="radio"] + label {
+    width: 30%;
+    padding: 10px 0;
+  }
+  .userReasonForm .buttonContainer {
+    padding-left: 390px;
+  }
+  .styleQuestion {
+    padding-left: 150px;
+  }
+  .userVibeForm .buttonContainer {
+    padding-left: 440px;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 5rem;
+    padding: 80px 0 30px 150px;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .needSomeGrit {
+    font-size: 2.3rem;
+  }
+  input[type="radio"] + label {
+    width: 40%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    font-size: 2rem;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .userVibe input[type="radio"] + label {
+    width: 20%;
+    padding: 0;
+  }
+  .userReasonForm .buttonContainer {
+    padding-left: 320px;
+  }
+  .styleQuestion {
+    padding-left: 150px;
+    font-size: 2.3rem;
+  }
+  .userVibeForm .buttonContainer {
+    padding-left: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+    padding-left: 100px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .needSomeGrit {
+    font-size: 2rem;
+  }
+  input[type="radio"] + label {
+    width: 50%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    font-size: 2rem;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .userVibe input[type="radio"] + label {
+    width: 20%;
+    padding: 0;
+  }
+  .userReasonForm .buttonContainer {
+    padding-left: 200px;
+  }
+  .styleQuestion {
+    padding-left: 80px;
+    font-size: 2rem;
+  }
+  .userVibeForm .buttonContainer {
+    padding-left: 250px;
+  }
+  .resultsWrapper {
+    border: none;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.8rem;
+    padding-left: 50px;
+  }
+  h2 {
+    font-size: 2rem;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 2rem;
+    padding-left: 10px;
+  }
+  #name {
+    width: 50%;
+  }
+  .needSomeGrit {
+    font-size: 2rem;
+  }
+  input[type="radio"] + label {
+    width: 80%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    font-size: 1.8rem;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .userVibe input[type="radio"] + label {
+    width: 40%;
+    padding: 0;
+  }
+  .userReasonForm .buttonContainer {
+    padding-left: 130px;
+  }
+  .styleQuestion {
+    padding-left: 20px;
+    font-size: 2rem;
+  }
+  .userVibeForm .buttonContainer {
+    padding-left: 180px;
+  }
+  .resultsWrapper {
+    border: none;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2.5rem;
+    padding-left: 25px;
+  }
+  h2 {
+    font-size: 2rem;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 2rem;
+    padding-left: 10px;
+  }
+  #name {
+    width: 40%;
+    font-size: 2.5rem;
+  }
+  .needSomeGrit {
+    font-size: 2rem;
+    padding-top: -20px;
+  }
+  input[type="radio"] + label {
+    width: 100%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    font-size: 1.5rem;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .userVibe input[type="radio"] + label {
+    width: 40%;
+    padding: 0;
+  }
+  .userReasonForm .buttonContainer {
+    padding-left: 100px;
+  }
+  .styleQuestion {
+    padding-left: 20px;
+    font-size: 2rem;
+  }
+  .userVibeForm .buttonContainer {
+    padding-left: 150px;
+  }
+  .resultsWrapper {
+    border: none;
+    font-size: 2rem;
+  }
+  img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
